@@ -1,0 +1,18 @@
+class Solution {
+    public int findSpecialInteger(int[] arr) {
+        int n = arr.length,cnt = 0,ele = -1;
+        for(int i = 0;i<n;i++){
+            if(ele == arr[i]){
+                cnt++;
+            }
+            else{
+                cnt = 1;
+                ele = arr[i];
+            }
+            if(cnt > (n/4))
+            return ele;
+        }
+        return ele;
+
+    }
+}
